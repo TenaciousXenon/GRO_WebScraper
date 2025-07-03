@@ -1,2 +1,35 @@
 # GRO_WebScraper
 Internal web automation tools: static/static scrapers, GTM extractor, and subdomain validator
+
+## Contents
+
+- **GroCSVReader.py**  
+  Scrapes static HTML sites for data.
+
+- **DynamicReader.py**  
+  Extracts data (e.g. GTM IDs) from JavaScript-driven sites.
+
+- **subdomainValidator.py**  
+  Validates and tests lists of subdomains via CSV.
+
+- **company-docs/**  
+  User-friendly overviews and setup guides for non-technical staff.
+
+## Quick Start
+
+1. Clone the repo:  
+   ```
+   git clone git@github.com:YourOrg/company-web-tools.git
+   cd company-web-tools
+   ```
+
+2. Pick a tool folder and follow its `README.md`  
+3. For general setup, see [company-docs/Setup-Guide.md](company-docs/Setup-Guide.md)
+
+## Contributing
+
+1. Fork & clone  
+2. Create a topic branch  
+3. Add tests or docs  
+4. Submit a Pull Request
+
