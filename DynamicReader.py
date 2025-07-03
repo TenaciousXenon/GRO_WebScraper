@@ -18,6 +18,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+# NOTE: pandas, subprocess, selenium, numpy must be downloaded in environment 
+
 # -------------------------------------------------------------------
 # FALLBACK #2: Pure-HTML regex parse of <script> & <noscript> tags
 # -------------------------------------------------------------------
