@@ -5,8 +5,8 @@ A step-by-step for getting these tools running on your machine.
 ## 1. Clone the Repo
 
 ```bash
-git clone git@github.com:YourOrg/company-web-tools.git
-cd company-web-tools
+git clone git@github.com:TenaciousXenon/GRO_WebScraper.git
+cd GRO_WebScraper
 ```
 
 ## 2. Create & Activate Virtualenv
