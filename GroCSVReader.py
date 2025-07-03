@@ -7,6 +7,8 @@ from collections import defaultdict
 import re
 from concurrent.futures import ThreadPoolExecutor
 
+# NOTE: pandas, subprocess, and numpy must be downloaded in environment 
+
 def extract_main_domain(url):
     """Extract the main domain using manual parsing."""
     if not url.startswith(('http://', 'https://')):
