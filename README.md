@@ -33,3 +33,6 @@ Internal web automation tools: static/static scrapers, GTM extractor, and subdom
 3. Add tests or docs  
 4. Submit a Pull Request
 
+## Credits
+
+GRO Marketing Marketing Integrations team
