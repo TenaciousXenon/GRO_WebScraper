@@ -3,6 +3,8 @@ import socket
 import argparse
 from urllib.parse import urlparse
 
+NOTE: No special libraries are needed to use this program!
+
 def is_domain_reachable(domain, timeout=5):
     """Check if a domain is reachable via HTTP/HTTPS ports."""
     try:
