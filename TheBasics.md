@@ -126,4 +126,4 @@ If you plan to use **DynamicReader.py**, you need ChromeDriver:
 - **Email**: jburke@gromarketing.com  
 - **In-person**: ping @Joseph Burke on Teams
 
-That’s it—no coding required. Just install, double-click or paste one of the commands above, and you’ll have your updated CSV in minutes!  
+That’s it. No coding required. Just install, double-click or paste one of the commands above, and you’ll have your updated CSV in minutes  
