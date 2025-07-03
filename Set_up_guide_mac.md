@@ -9,52 +9,54 @@ git clone git@github.com:TenaciousXenon/GRO_WebScraper.git
 cd GRO_WebScraper
 ```
 
-## 2. Create & Activate Virtualenv
+## 2. Create & Activate a Virtual Environment
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate   # macOS/Linux
+# venv\Scripts\activate    # Windows
 ```
 
-## 3. Install All Requirements
+## 3. Install Python Dependencies
+
+If you don't already have Python 3+ and pip3:
 
 ```bash
-# 1. (If you don’t have Homebrew) install Homebrew:
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# 2. Update Homebrew and install Python 3 (incl. pip3)
+# Optional: install via Homebrew on macOS
 brew update
 brew install python3
-
-# 3. Verify Python 3 and pip3 are on your PATH
-python3 --version
-pip3 --version
-
-# 4. Install the common Python libraries
-pip3 install pandas aiohttp requests selenium
-
-# 5. (Optional, for Selenium) install ChromeDriver
-brew install --cask chromedriver
 ```
 
-## 4. Ensure ChromeDriver (for dynamic-site-scraper)
+Then install all required libraries in one go:
 
-- Download matching ChromeDriver for your Chrome version.
-- Place it on your `PATH`.
-- Also, everything needs to be in the same directory with virtual environment activated
-- directory needs to be cd
+```bash
+pip3 install pandas aiohttp requests selenium
+```
+
+## 4. Install ChromeDriver (for Selenium)
+
+You need ChromeDriver to run dynamic-site-scraper:
+
+```bash
+brew install --cask chromedriver   # macOS
+```
+
+Or download the matching version from  
+https://sites.google.com/chromium.org/driver/  
+and add it to your `PATH`.
 
 ## 5. Run a Tool
 
 ```bash
-# Static HTML
+# Static HTML scraper
 python GroCSVReader.py --input samples.csv --output out.csv
 
-# Dynamic JS
-python DynamicReader.py
+# Dynamic JS scraper
+python DynamicReader.py --input urls.csv --output gtm_results.csv
 
-# Subdomain Test
-python subdomainValidator.py domains.csv results.csv --column='example subdomain'
+# Subdomain tester
+python subdomainValidator.py domains.csv results.csv \
+    --column "Subdomain(s)"
 ```
 
 ## 6. Push Changes Back (for contributors)
@@ -63,6 +65,6 @@ python subdomainValidator.py domains.csv results.csv --column='example subdomain
 git checkout -b docs/add-readmes
 git add .
 git commit -m "Add comprehensive documentation"
-git push --set-upstream origin docs/add-readmes
-# Open a pull request on GitHub
+git push -u origin docs/add-readmes
+# Then open a pull request on GitHub.
 ```
