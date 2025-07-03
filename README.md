@@ -1,6 +1,8 @@
 # GRO_WebScraper
 Internal web automation tools: static/static scrapers, GTM extractor, and subdomain validator
 
+## NOTE: Any non cs devs please read TheBasics.md for ease of use
+
 ## Contents
 
 - **GroCSVReader.py**  
