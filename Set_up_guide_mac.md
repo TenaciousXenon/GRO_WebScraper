@@ -14,33 +14,47 @@ cd company-web-tools
 ```bash
 python3 -m venv venv
 source venv/bin/activate   # macOS/Linux
-venv\Scripts\activate      # Windows
 ```
 
 ## 3. Install All Requirements
 
 ```bash
-pip install -r static-site-scraper/requirements.txt
-pip install -r dynamic-site-scraper/requirements.txt
-pip install -r subdomain-tester/requirements.txt
+# 1. (If you don’t have Homebrew) install Homebrew:
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 2. Update Homebrew and install Python 3 (incl. pip3)
+brew update
+brew install python3
+
+# 3. Verify Python 3 and pip3 are on your PATH
+python3 --version
+pip3 --version
+
+# 4. Install the common Python libraries
+pip3 install pandas aiohttp requests selenium
+
+# 5. (Optional, for Selenium) install ChromeDriver
+brew install --cask chromedriver
 ```
 
 ## 4. Ensure ChromeDriver (for dynamic-site-scraper)
 
 - Download matching ChromeDriver for your Chrome version.
 - Place it on your `PATH`.
+- Also, everything needs to be in the same directory with virtual environment activated
+- directory needs to be cd
 
 ## 5. Run a Tool
 
 ```bash
 # Static HTML
-python static-site-scraper/scraper.py --input samples/urls.txt --output out.csv
+python GroCSVReader.py --input samples.csv --output out.csv
 
 # Dynamic JS
-python dynamic-site-scraper/scraper.py
+python DynamicReader.py
 
 # Subdomain Test
-python subdomain-tester/tester.py domains.csv results.csv
+python subdomainValidator.py domains.csv results.csv --column='example subdomain'
 ```
 
 ## 6. Push Changes Back (for contributors)
