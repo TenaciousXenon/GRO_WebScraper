@@ -12,19 +12,19 @@ Internal web automation tools: static/static scrapers, GTM extractor, and subdom
 - **subdomainValidator.py**  
   Validates and tests lists of subdomains via CSV.
 
-- **company-docs/**  
+- **Set_up_guide.md**  
   User-friendly overviews and setup guides for non-technical staff.
 
 ## Quick Start
 
 1. Clone the repo:  
    ```
-   git clone git@github.com:YourOrg/company-web-tools.git
-   cd company-web-tools
+   git clone git@github.com:TenaciousXenon/GRO_WebScraper.git
+   cd GRO_WebScraper
    ```
 
 2. Pick a tool folder and follow its `README.md`  
-3. For general setup, see [company-docs/Setup-Guide.md](company-docs/Setup-Guide.md)
+3. For general setup, see [company-docs/Setup-Guide.md](Set_up_guide.md)
 
 ## Contributing
 
